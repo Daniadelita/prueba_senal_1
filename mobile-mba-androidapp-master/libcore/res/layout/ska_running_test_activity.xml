@@ -1,0 +1,413 @@
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:app1="http://com.samknows.android"
+     	style="@style/screenBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            style="@style/screenBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:src="@drawable/fondo_pantalla_1" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <ProgressBar
+                            android:id="@+id/progressBar1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="#ffffff"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/average_page"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        
+                        android:orientation="vertical"
+                        android:paddingTop="20dp" >
+
+                        <ImageView
+                            android:id="@+id/ImageView03"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:baselineAlignBottom="false"
+                            android:contentDescription="@string/line_break"
+                            android:cropToPadding="false"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/pagedrop" />
+
+                        <TextView
+                            android:id="@+id/active_metrics_textview"
+                            style="@style/h1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="left"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/active_metrics_mobile"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#555555"
+                            android:width="160dp" />
+
+                        <TableLayout
+                            android:id="@+id/download_test_panel"
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/black_alpha"
+                            android:paddingRight="10dp" >
+
+                            <TableRow
+                                android:id="@+id/TableRow09"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <ImageView
+                                    android:id="@+id/imageView2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical|center_horizontal|center"
+                                    android:src="@drawable/flecha" />
+
+                                <TextView
+                                    android:id="@+id/TextView12"
+                                    style="@style/column"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/download"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textSize="18sp"
+                                    android:width="130dp" />
+
+                                <TextView
+                                    android:id="@+id/download_result"
+                                    style="@style/column"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="right|center_vertical"
+                                    android:layout_weight="1"
+                                    android:gravity="right|center_vertical"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textSize="16sp" />
+
+                                <com.samknows.measurement.activity.components.ProgressWheel
+                                    android:id="@+id/ProgressWheel1"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="right|center_vertical"
+                                    android:contentDescription="@string/status"
+                                    app:barColor="#60abca"
+                                    
+                                    app:textSize="1sp"
+                                    app1:barColor="#FFFFFF"
+                                    app1:barLength="60dp"
+                                    app1:barWidth="5dp"
+                                    app1:rimColor="#50F050"
+                                    app1:rimWidth="2dp"
+                                    app1:textColor="#FFFFFF"
+                                    app1:textSize="14sp"
+                                    app1:title="Authenticating..." 
+                                    android:visibility="gone"/>
+
+                            </TableRow>
+                        </TableLayout>
+
+                        <TableLayout
+                            android:id="@+id/upload_test_panel"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/black_alpha"
+                            android:paddingRight="10dp" >
+
+                            <TableRow
+                                android:id="@+id/TableRow07"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp" >
+
+                                <ImageView
+                                    android:id="@+id/imageView3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical|center_horizontal|center"
+                                    android:src="@drawable/flecha" />
+
+                                <TextView
+                                    android:id="@+id/TextView15"
+                                    style="@style/column"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/upload"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textSize="18sp"
+                                    android:width="130dp" />
+
+                                <TextView
+                                    android:id="@+id/upload_result"
+                                    style="@style/column"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="right|center_vertical"
+                                    android:layout_weight="1"
+                                    android:gravity="right|center_vertical"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textSize="16sp" />
+
+                                <com.samknows.measurement.activity.components.ProgressWheel
+                                    android:id="@+id/ProgressWheel2"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:contentDescription="@string/status"
+                                    app:barColor="#60abca"
+                                    app:rimColor="#dddddd"
+                                    app:textColor="#ffffff"
+                                    app:textSize="1sp"
+                                    app1:barColor="#FFFFFF"
+                                    app1:barLength="60dp"
+                                    app1:barWidth="5dp"
+                                    app1:rimColor="#cccccc"
+                                    app1:rimWidth="2dp"
+                                    app1:textColor="#FFFFFF"
+                                    app1:textSize="14sp"
+                                    app1:title="Authenticating..." 
+                                    android:visibility="gone"/>
+
+                            </TableRow>
+                        </TableLayout>
+
+                        <TableLayout
+                            android:id="@+id/latency_test_panel"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/black_alpha"
+                            android:paddingRight="10dp" >
+
+                            <TableRow
+                                android:id="@+id/TableRow04"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
+
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical|center_horizontal|center"
+                                    android:src="@drawable/flecha" />
+
+                                <TextView
+                                    android:id="@+id/TextView17"
+                                    style="@style/column"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/latency"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textSize="18sp"
+                                    android:width="130dp" />
+
+                                <TextView
+                                    android:id="@+id/latency_result"
+                                    style="@style/column"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:layout_weight="1"
+                                    android:gravity="right|center_vertical"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textSize="16sp" />
+
+                                <com.samknows.measurement.activity.components.ProgressWheel
+                                    android:id="@+id/ProgressWheel4"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    app:barColor="#60abca"
+                                    app:rimColor="#dddddd"
+                                    app:textColor="#ffffff"
+                                    app:textSize="1sp"
+                                    app1:barColor="#FFFFFF"
+                                    app1:barLength="60dp"
+                                    app1:barWidth="5dp"
+                                    app1:rimColor="#50F050"
+                                    app1:rimWidth="2dp"
+                                    app1:textColor="#FFFFFF"
+                                    app1:textSize="14sp"
+                                    app1:title="Authenticating..." 
+                                    android:visibility="gone"/>
+                            </TableRow>
+                        </TableLayout>
+
+                        <TableLayout
+                            android:id="@+id/packetloss_test_panel"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/black_alpha"
+                            android:paddingRight="10dp" >
+
+                            <TableRow
+                                android:id="@+id/TableRow01"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
+
+                                <ImageView
+                                    android:id="@+id/imageView5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical|center_horizontal|center"
+                                    android:src="@drawable/flecha" />
+
+                                <TextView
+                                    android:id="@+id/TextView16"
+                                    style="@style/column"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/p_loss"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textSize="18sp"
+                                    android:width="130dp" />
+
+                                <TextView
+                                    android:id="@+id/packetloss_result"
+                                    style="@style/column"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:layout_weight="1"
+                                    android:gravity="right|center_vertical"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textSize="16sp" />
+
+                                <com.samknows.measurement.activity.components.ProgressWheel
+                                    android:id="@+id/ProgressWheel3"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    app:barColor="#60abca"
+                                    app:rimColor="#dddddd"
+                                    app:textColor="#ffffff"
+                                    app:textSize="1sp"
+                                    app1:barColor="#FFFFFF"
+                                    app1:barLength="60dp"
+                                    app1:barWidth="5dp"
+                                    app1:rimColor="#50F050"
+                                    app1:rimWidth="2dp"
+                                    app1:textColor="#FFFFFF"
+                                    app1:textSize="14sp"
+                                    app1:title="Authenticating..." 
+                                    android:visibility="gone"/>
+
+                            </TableRow>
+                        </TableLayout>
+
+                        <TableLayout
+                            android:id="@+id/jitter_test_panel"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/black_alpha"
+                            android:paddingRight="10dp" >
+
+                            <TableRow
+                                android:id="@+id/TableRow02"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
+
+                                <ImageView
+                                    android:id="@+id/imageView6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical|center_horizontal|center"
+                                    android:src="@drawable/flecha" />
+
+                                <TextView
+                                    android:id="@+id/TextView18"
+                                    style="@style/column"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/jitter"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textSize="18sp"
+                                    android:width="130dp" />
+
+                                <TextView
+                                    android:id="@+id/jitter_result"
+                                    style="@style/column"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:layout_weight="1"
+                                    android:gravity="right|center_vertical"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textSize="16sp" />
+
+                                <com.samknows.measurement.activity.components.ProgressWheel
+                                    android:id="@+id/JitterProgressWheel"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    app:barColor="#60abca"
+                                    app:rimColor="#dddddd"
+                                    app:textSize="1sp"
+                                    app1:barColor="#FFFFFF"
+                                    app1:barLength="60dp"
+                                    app1:barWidth="5dp"
+                                    app1:rimColor="#50F050"
+                                    app1:rimWidth="2dp"
+                                    app1:textColor="#FFFFFF"
+                                    app1:textSize="14sp"
+                                    app1:title="Authenticating..."
+                                    android:visibility="gone"/>
+
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
