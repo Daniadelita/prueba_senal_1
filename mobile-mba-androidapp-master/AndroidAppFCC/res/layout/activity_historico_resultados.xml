@@ -17,7 +17,7 @@
         <ImageView
             android:id="@+id/imageView1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:src="@drawable/fondo_pantalla_1" />
@@ -60,7 +60,8 @@
             <TableRow
                 android:id="@+id/tableRow1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content" 
+                android:background="#4d9d45">
 
                 <TextView
                     android:id="@+id/textView1"
@@ -78,8 +79,8 @@
                     android:id="@+id/textView3"
                     android:layout_width="0dip"
                     android:layout_height="wrap_content"
-                    android:layout_margin="4dip"
-                    android:layout_weight="1"
+                    android:layout_margin="2dip"
+                    android:layout_weight="1.1"
                     android:drawableLeft="@drawable/download"
                     android:gravity="center"
                     android:padding="10dip"

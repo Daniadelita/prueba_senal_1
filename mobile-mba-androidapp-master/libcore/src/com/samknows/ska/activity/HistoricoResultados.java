@@ -14,6 +14,7 @@ import com.samknows.libcore.R;
 
 import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -70,7 +71,7 @@ public class HistoricoResultados extends Activity {
             	y++;
             }
             
-            cadenota = new String [y][5];
+            cadenota = new String [y][6];
             y=0;
             
             for(String cadena:lista){
@@ -80,7 +81,8 @@ public class HistoricoResultados extends Activity {
     			System.out.println("y[" + y + "][1]: " + cadenota [y][1] );
     			System.out.println("y[" + y + "][2]: " + cadenota [y][2] );
     			System.out.println("y[" + y + "][3]: " + cadenota [y][3] );
-    			System.out.println("y[" + y + "][4]: " + cadenota [y][4] );    			
+    			System.out.println("y[" + y + "][4]: " + cadenota [y][4] ); 
+    			
     			y++;
     		}
             System.out.println ("y: " + y);
@@ -88,48 +90,61 @@ public class HistoricoResultados extends Activity {
             TableRow.LayoutParams layoutId = new TableRow.LayoutParams(0,LayoutParams.WRAP_CONTENT,1);
             
             for (int x=0; x<y;x++){
+            	if(cadenota[x][5].equalsIgnoreCase("1")){
+            		fila = new TableRow(this);
+            	//	fila.setLayoutParams(layoutFila);
+            		
+            		fecha = new TextView (this);
+            		fecha.setCompoundDrawablesWithIntrinsicBounds(R.drawable.derecha, 0, 0, 0);
+            		fecha.setLayoutParams(layoutId);
+            		fecha.setGravity(Gravity.CENTER);
+            		fecha.setTextSize(13);
+            	//	fecha.setPadding(10, 0, 0, 0);
+            		
+            		
+            		descarga = new TextView (this);
+            		descarga.setLayoutParams(layoutId);
+            		descarga.setGravity(Gravity.CENTER);
+            		descarga.setTextSize(13);
+        		//	descarga.setPadding(10, 0, 0, 0);
+            		
+            		
+            		carga = new TextView (this);
+            		carga.setLayoutParams(layoutId);
+            		carga.setGravity(Gravity.CENTER);
+            		carga.setTextSize(13);
+        		//	carga.setPadding(10, 0, 0, 0);
+            		
+            		
+            		potencia = new TextView (this);
+            		potencia.setLayoutParams(layoutId);
+            		potencia.setGravity(Gravity.CENTER);
+            		potencia.setTextSize(13);
+        		//	potencia.setPadding(10, 0, 0, 0);
+            		
+            		
+            		fecha.setText(cadenota[x][0] + "\n" + cadenota [x][1]);
+            		descarga.setText(cadenota[x][2]);
+            		carga.setText(cadenota[x][3]); 
+            		potencia.setText(cadenota[x][4] + " dBm");
+            		
+            		if((x%2==0))
+            			fila.setBackgroundColor(Color.parseColor("#999999"));
+            		else
+            			fila.setBackgroundColor(Color.parseColor("#919191"));
+            		fila.addView(fecha);
+            		fila.addView(descarga);
+            		fila.addView(carga);
+            		fila.addView(potencia);
+            		
             	
-            	fila = new TableRow(this);
-            	//fila.setLayoutParams(layoutFila);
-            	
-            	fecha = new TextView (this);
-            	fecha.setCompoundDrawablesWithIntrinsicBounds(R.drawable.derecha, 0, 0, 0);
-            	fecha.setLayoutParams(layoutId);
-            	fecha.setGravity(Gravity.CENTER);
-            	//fecha.setPadding(10, 0, 0, 0);
-
-            	
-        		descarga = new TextView (this);
-        		descarga.setLayoutParams(layoutId);
-        		descarga.setGravity(Gravity.CENTER);
-        		//descarga.setPadding(10, 0, 0, 0);
-            	
-            	
-        		carga = new TextView (this);
-        		carga.setLayoutParams(layoutId);
-        		carga.setGravity(Gravity.CENTER);
-        		//carga.setPadding(10, 0, 0, 0);
-            	
-            	
-        		potencia = new TextView (this);
-        		potencia.setLayoutParams(layoutId);
-        		potencia.setGravity(Gravity.CENTER);
-        		//potencia.setPadding(10, 0, 0, 0);
-            	
-            	
-            	fecha.setText(cadenota[x][0]);
-            	descarga.setText(cadenota[x][2]);
-            	carga.setText(cadenota[x][3]);
-            	potencia.setText(cadenota[x][4]);
-            	
-            	fila.addView(fecha);
-            	fila.addView(descarga);
-            	fila.addView(carga);
-            	fila.addView(potencia);
-            	
-            	tabla.addView(fila);
+            		tabla.addView(fila);
+            	}
+            	else{
+            		
+            	}
             }
-           
+            
             
             
             

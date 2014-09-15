@@ -173,7 +173,7 @@
     <string name="manual_test_create_failed_3">ManualTest cannot be initialized - the main service is running.</string>
     <string name="manual_test_error">Unable to launch tests, another background test is running. Please retry shortly.</string>
     <string name="manufacturer">Manufacturer</string>
-    <string name="max_data_cap_message">Maximum amount limited to </string>
+    <string name="max_data_cap_message">Límite máximo de datos en Mb:  </string>
     <string name="mb">MB</string>
     <string name="menu_export_file_string">Export results</string>
     <string name="menu_terms_and_condition">Terms of Use</string>

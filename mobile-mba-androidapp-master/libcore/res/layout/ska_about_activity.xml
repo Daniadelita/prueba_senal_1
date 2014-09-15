@@ -28,7 +28,7 @@
                 <ImageView
                     android:id="@+id/imageView1"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="70dp"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:src="@drawable/fondo_pantalla_1" />

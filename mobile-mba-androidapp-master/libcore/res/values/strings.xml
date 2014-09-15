@@ -177,7 +177,7 @@
     <string name="manual_test_create_failed_3">ManualTest cannot be initialized - the main service is running.</string>
     <string name="manual_test_error">Unable to launch tests, another background test is running. Please retry shortly.</string>
     <string name="manufacturer">Manufacturer</string>
-    <string name="max_data_cap_message">Maximum amount limited to </string>
+    <string name="max_data_cap_message">Límite máximo de datos en Mb:  </string>
     <string name="mb">MB</string>
     <string name="menu_export_file_string">Export results</string>
     <string name="menu_terms_and_condition">Terms of Use</string>
@@ -353,7 +353,7 @@
     <string name="data_cap_enabled_summary">Set this checkbox if you wish to enable the use of the mobile data cap. Uncheck the checkbox if you wish to disable the use of the mobile data cap.</string>
     <string name="vacio" />
     <string name="herramientas">Herramientas</string>
-    <string name="introduccion">Está aplicación te ayudará a conocer la velocidad de carga y descarga de archivos proporcionada por tu proveedor de telefonia, para continuar presiona el boton \"Iniciar la prueba\".</string>
+    <string name="introduccion">Ésta aplicación te ayudará a conocer la velocidad de carga y descarga de archivos proporcionada por tu proveedor de telefonia, para continuar presiona el boton \"Iniciar la prueba\".</string>
     <string name="ift">¿Quiénes somos?</string>
     <string name="ift_d">El Instituto Federal de Telecomunicaciones es un órgano autónomo. Su objetivo primordial es el desarrollo eficiente de la radiodifusión y las telecomunicaciones en México con apego a lo establecido en la Constitución. Para lograrlo, deberá regular, promover y supervisar el uso, aprovechamiento y explotación de:</string>
     <string name="ift_d2">\t-El espectro radioeléctrico.</string>

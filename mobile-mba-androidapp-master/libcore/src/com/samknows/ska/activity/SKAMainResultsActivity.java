@@ -133,6 +133,7 @@ public class SKAMainResultsActivity extends BaseLogoutActivity implements OnClic
 
 	int TIMEOUT_MILLISEC = 10000;
 	int bandera = 0;
+	int botoncito=0;
 	private String operador_red ="", imei_red ="", so_red = "", tipo_red = "", hora_red = "", fecha_red = "", MAC_red = "", potencia_red ="";
 	private String lat="", lon="";
 	private String valor_subida="", unidad_subida="", valor_bajada="", unidad_bajada="", bajada ="", subida="", latencia="", perdida_paquetes="";
@@ -708,7 +709,7 @@ public class SKAMainResultsActivity extends BaseLogoutActivity implements OnClic
 			@Override
 			public void onClick(View v) {
 			
-				
+				botoncito = 1;
 				RunChoice();
 				
 
@@ -1648,7 +1649,8 @@ public class SKAMainResultsActivity extends BaseLogoutActivity implements OnClic
 				sc.setData(sr);
 				
 				
-				cadena_final = fecha_red + "," + hora_red + "," + bajada + "," + subida + "," + potencia_red; 
+				cadena_final = fecha_red + "," + hora_red + "," + bajada + "," + subida + "," + potencia_red + "," + botoncito;
+				botoncito=0;
 				
 				
 				
